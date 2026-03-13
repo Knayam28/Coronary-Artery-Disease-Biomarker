@@ -7,7 +7,7 @@ This project presents a robust, multi-phase computational pipeline designed to p
 Finding drug targets usually takes years of trial and error in wet labs. This computational approach accelerates that process. By mathematically isolating highly predictive genes (such as *CCL3* and *IL18RAP*), this model provides actionable insights for pharmaceutical research. Instead of guessing, researchers can leverage these results to develop targeted therapeutics—for instance, developing a drug that specifically blocks a targeted pathway based on computational proof of its role in disease progression.
 
 ## 📊 Dataset & Clinical Cohort
-The data utilized in this project originates from the **PREDICT Trial** (ClinicalTrials.gov Identifier: [NCT00500617](https://clinicaltrials.gov/ct2/show/NCT00500617)), a prospective, multi-center coronary catheter-lab study.
+The data utilized in this project originates from the **PREDICT Trial** (ClinicalTrials.gov Identifier: [NCT00500617], a prospective, multi-center coronary catheter-lab study.
 
 * **Source:** NCBI Gene Expression Omnibus (GEO) - Accession [GSE20681](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20681)
 * **Sample Type:** Whole-blood RNA (*Homo sapiens*) isolated prior to cardiac catheterization.
@@ -39,11 +39,11 @@ The architecture of this project is divided into four distinct phases, executed 
 * **Hyperparameter Tuning:** Utilized `GridSearchCV` to exhaustively optimize tree depth, estimator count, and split criteria.
 * **Performance Metrics:** The model's predictive power was evaluated using Accuracy, ROC-AUC score, and a Confusion Matrix.
 
-### Phase 4: Biological Validation & Pathway Mapping
-* **Feature Importance:** Extracted the top predictive features determined by the Random Forest model.
-* **Annotation Mapping:** Merged ML feature importance scores with DGE statistics and mapped the raw Probe IDs to standardized Gene Symbols and Titles using the `GPL4133.annot` file.
-* **Scientific Cross-Validation:** The machine learning feature selection and the biological DGE analysis pointed to the exact same underlying biology. This dual-angle interrogation ensures the computational conclusions are scientifically bulletproof.
-
+### Phase 4: Biological Validation & Pathway Analysis
+* **Feature Importance Extraction:** Extracted the top predictive features determined by the Random Forest model.
+* **Annotation Mapping:** Merged ML feature importance scores with DGE statistics, mapping raw Probe IDs to standardized Gene Symbols using the `GPL4133.annot` file.
+* **Gene Set Enrichment Analysis (GSEA) & KEGG:** Conducted pathway analysis to map the highly predictive genes (e.g., *CCL3*, *IL18RAP*) to established biological networks. 
+* **Scientific Cross-Validation:** By linking machine learning feature importance to KEGG pathways, the pipeline confirms that the computational model is tracking genuine disease pathology (e.g., inflammatory or metabolic pathways associated with CAD) rather than mathematical artifacts.
 ---
 
 ## 📈 Key Results
@@ -58,9 +58,4 @@ The architecture of this project is divided into four distinct phases, executed 
 
 ---
 
-## 🚀 Installation & Usage
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/yourusername/CAD-Gene-Expression-ML.git](https://github.com/yourusername/CAD-Gene-Expression-ML.git)
-   cd CAD-Gene-Expression-ML
