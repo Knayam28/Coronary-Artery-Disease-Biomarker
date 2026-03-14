@@ -53,7 +53,7 @@ The architecture of this project is divided into four distinct phases, executed 
 
 ### Feature Importance
 The Random Forest model identified the following features as the strongest drivers of the predictive split:
-![Random Forest Feature Importance]()
+![Random Forest Feature Importance](images/rf_impoutput.png)
 
 *(Note: Ensure your top features like CCL3 and IL18RAP are visible here)*
 
@@ -61,10 +61,10 @@ The Random Forest model identified the following features as the strongest drive
 To validate the biological relevance of the 22 isolated features, pathway analysis maps these genes to known systemic networks:
 
 **KEGG Pathway Analysis:**
-![KEGG Pathway Figure](images/kegg_pathway.png)
+![KEGG Pathway Figure](images/keggoutput.png)
 
 **Gene Set Enrichment Analysis (GSEA):**
-![GSEA Plot](images/gsea_plot.png)
+![GSEA Plot](images/gseaoutput.png)
 
 ## 🛠️ Tech Stack & Libraries
 * **Data Manipulation:** `pandas`, `numpy`
