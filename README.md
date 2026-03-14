@@ -55,7 +55,7 @@ The architecture of this project is divided into four distinct phases, executed 
 The Random Forest model identified the following features as the strongest drivers of the predictive split:
 ![Random Forest Feature Importance](images/rf_impoutput.png)
 
-*(Note: Ensure your top features like CCL3 and IL18RAP are visible here)*
+
 
 ### Pathway & Enrichment Analysis
 To validate the biological relevance of the 22 isolated features, pathway analysis maps these genes to known systemic networks:
