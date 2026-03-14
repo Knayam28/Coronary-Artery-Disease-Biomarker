@@ -20,7 +20,7 @@ The data utilized in this project originates from the **PREDICT Trial** (Clinica
 
 ## ⚙️ The Computational Pipeline
 
-The architecture of this project is divided into four distinct phases, executed sequentially in `g7.ipynb`:
+The architecture of this project is divided into four distinct phases, executed sequentially in `CAD_RF.ipynb`:
 
 ### Phase 1: Data Engineering & Preprocessing
 * **Parsing:** Extracted the clinical metadata and raw expression matrix directly from the GEO series matrix file.
@@ -46,9 +46,25 @@ The architecture of this project is divided into four distinct phases, executed 
 * **Scientific Cross-Validation:** By linking machine learning feature importance to KEGG pathways, the pipeline confirms that the computational model is tracking genuine disease pathology (e.g., inflammatory or metabolic pathways associated with CAD) rather than mathematical artifacts.
 ---
 
-## 📈 Key Results
-* **Predictive Accuracy:** The optimized Random Forest model achieved a solid **Accuracy of 66.67%** and an **ROC-AUC Score of 0.6456** on unseen test data.
+## 📈 Key Results & Visualizations
+
+* **Predictive Accuracy:** The optimized Random Forest model achieved an **Accuracy of 66.67%** and an **ROC-AUC Score of 0.6456** on unseen test data, demonstrating a solid baseline for transcriptomic prediction.
 * **Biomarker Discovery:** Successfully pinpointed 22 critical genes. The dual validation confirms that the computational model is genuinely tracking disease pathology, not just mathematical artifacts.
+
+### Feature Importance
+The Random Forest model identified the following features as the strongest drivers of the predictive split:
+![Random Forest Feature Importance]()
+
+*(Note: Ensure your top features like CCL3 and IL18RAP are visible here)*
+
+### Pathway & Enrichment Analysis
+To validate the biological relevance of the 22 isolated features, pathway analysis maps these genes to known systemic networks:
+
+**KEGG Pathway Analysis:**
+![KEGG Pathway Figure](images/kegg_pathway.png)
+
+**Gene Set Enrichment Analysis (GSEA):**
+![GSEA Plot](images/gsea_plot.png)
 
 ## 🛠️ Tech Stack & Libraries
 * **Data Manipulation:** `pandas`, `numpy`
