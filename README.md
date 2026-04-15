@@ -10,7 +10,7 @@ Finding drug targets usually takes years of trial and error in wet labs. This co
 The data utilized in this project originates from the **PREDICT Trial** (ClinicalTrials.gov Identifier: [NCT00500617], a prospective, multi-center coronary catheter-lab study.
 
 * **Source:** NCBI Gene Expression Omnibus (GEO) - Accession [GSE20681](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE20681)
-* **Sample Type:** Whole-blood RNA (*Homo sapiens*) isolated prior to cardiac catheterization.
+* **Sample Type:** Whole-blood cell gene expression (*Homo sapiens*) isolated prior to cardiac catheterization.
 * **Platform:** GPL4133 (Expression profiling by array)
 * **Experimental Design:** 2-condition, paired experiment balancing age and gender to minimize confounding variables.
   * **Case (CAD):** Patients exhibiting ≥50% luminal stenosis in at least one major vessel, confirmed via Quantitative Coronary Angiography (QCA).
